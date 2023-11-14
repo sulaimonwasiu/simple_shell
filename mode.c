@@ -43,7 +43,6 @@ void non_interactive(void)
 
 	if (getline(&input, &input_length, stdin) != -1)
 	{
-		printf("I am in the non-interactive mode!!!!\n");
 		input[_strlen(input) - 1] = '\0';
 		execute_command(input);
 	}
