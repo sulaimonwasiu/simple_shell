@@ -152,8 +152,11 @@ void execute_command(char *command)
 	}
 	else
 	{
+		int status;
+
+		status = custom_exit(args);
 		free(args);
-		exit(0);
+		exit(status);
 	}
 	free(args);
 }
