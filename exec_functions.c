@@ -136,20 +136,13 @@ void execute_command(char *command)
 	char **args = tokenizer(command);
 
 	if (strlen(command) == 0 || strspn(command, " \t\n") == strlen(command))
-	{
 		return;
-	}
-
 	/*Execute built-in commands*/
 	if (_strcmp(args[0], "env") == 0)
-	{
 		execute_env_command();
-	}
 
 	if (_strcmp(args[0], "exit") != 0)
-	{
 		execute_regular_command(args);
-	}
 	else
 	{
 		int status;
