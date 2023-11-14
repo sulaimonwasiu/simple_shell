@@ -41,10 +41,11 @@ void non_interactive(void)
 	char *input;
 	size_t input_length = 0;
 
-	if (getline(&input, &input_length, stdin) != -1)
+	while (getline(&input, &input_length, stdin) != -1)
 	{
 		input[_strlen(input) - 1] = '\0';
 		execute_command(input);
 	}
+
 	free(input);
 }
