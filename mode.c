@@ -29,6 +29,8 @@ void interactive(void)
 		input[_strlen(input) - 1] = '\0';
 		execute_command(input);
 	}
+
+	free(input);
 }
 
 /**
