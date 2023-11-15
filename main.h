@@ -25,6 +25,7 @@ void execute_regular_command(char **args);
 void execute_command(char *command);
 void interactive(void);
 void non_interactive(void);
+char *_strtok(char *str, char const *delim);
 int command_exists(char *command);
 
 /* Custom built-ins */
