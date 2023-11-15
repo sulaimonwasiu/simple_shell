@@ -142,10 +142,7 @@ void execute_command(char *command)
 
 	if (_strcmp(args[0], "exit") != 0)
 	{
-		if (command_exists(args[0]))
-			execute_regular_command(args);
-		else
-			printf("Command not found: %s\n", args[0]);
+		execute_regular_command(args);
 	}
 	else
 	{
