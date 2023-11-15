@@ -75,7 +75,7 @@ void execute_child_process(char **args)
 	else
 	{
 		char *path_env = getenv("PATH");
-		char *path = _strtok(path_env, ":");
+		char *path = strtok(path_env, ":");
 		char *not_found_message = "./hsh";
 		char *command_name = args[0];
 		char *error_message = ": not found\n";
@@ -83,7 +83,7 @@ void execute_child_process(char **args)
 		while (path != NULL)
 		{
 			execute_command_from_path(args, path);
-			path = _strtok(NULL, ":");
+			path = strtok(NULL, ":");
 		}
 		write(STDERR_FILENO, not_found_message, _strlen(not_found_message));
 		write(STDERR_FILENO, ": 1: ", 5);
