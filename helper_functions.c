@@ -10,7 +10,7 @@
 char **tokenizer(char *input)
 {
 	int arg_count = 0;
-	char *token = _strtok(input, "  \t\n");
+	char *token = _strtok(input, " \t\n");
 	char **args = (char **)malloc(sizeof(char *) * MAX_INPUT_LENGTH);
 
 	if (args == NULL)
