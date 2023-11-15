@@ -2,7 +2,6 @@
 
 /**
  * execute_env_command- execute env
- * @args: command
  *
  * Return: void
  */
