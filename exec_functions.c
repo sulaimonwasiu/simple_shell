@@ -141,7 +141,10 @@ void execute_command(char *command)
 	}
 	/*Execute built-in commands*/
 	if (_strcmp(args[0], "env") == 0)
+	{
 		execute_env_command();
+		free(args);
+	}
 
 	if (_strcmp(args[0], "exit") != 0)
 	{
@@ -152,6 +155,7 @@ void execute_command(char *command)
 		/* int status; */
 
 		/*status = custom_exit(args);*/
+		free(args);
 		exit(0);
 	}
 	free(args);
