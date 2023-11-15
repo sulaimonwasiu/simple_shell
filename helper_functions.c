@@ -22,7 +22,7 @@ char **tokenizer(char *input)
 	while (token != NULL)
 	{
 		args[arg_count++] = token;
-		token = strtok(NULL, " ");
+		token = strtok(NULL, " \t\n");
 	}
 	args[arg_count] = NULL;
 
