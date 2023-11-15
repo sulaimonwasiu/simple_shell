@@ -8,7 +8,7 @@
 
 void interactive(void)
 {
-	char *input;
+	char *input = NULL;
 	size_t input_length = 0;
 	ssize_t nread;
 
@@ -40,7 +40,7 @@ void interactive(void)
 
 void non_interactive(void)
 {
-	char *input;
+	char *input = NULL;
 	size_t input_length = 0;
 
 	while (getline(&input, &input_length, stdin) != -1)
