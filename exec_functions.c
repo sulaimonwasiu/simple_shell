@@ -135,7 +135,10 @@ void execute_command(char *command)
 	char **args = tokenizer(command);
 
 	if (strlen(command) == 0 || strspn(command, " \t\n") == strlen(command))
+	{
+		free(args);
 		return;
+	}
 	/*Execute built-in commands*/
 	if (_strcmp(args[0], "env") == 0)
 		execute_env_command();
