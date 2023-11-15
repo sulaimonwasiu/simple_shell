@@ -147,7 +147,6 @@ void execute_command(char *command)
 	else
 	{
 		int status;
-
 		status = custom_exit(args);
 		exit(status);
 	}

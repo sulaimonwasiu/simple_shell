@@ -15,8 +15,9 @@ void interactive(void)
 	while (1)
 	{
 
-		write(STDOUT_FILENO, "($) ", 4);
-		fflush(stdout);
+		/*write(STDOUT_FILENO, "($) ", 4);*/
+		/*fflush(stdout);*/
+		printf("#cisfun$ ");
 
 		nread = getline(&input, &input_length, stdin);
 		if (nread == EOF)
