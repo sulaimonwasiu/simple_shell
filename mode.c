@@ -22,7 +22,6 @@ void interactive(void)
 		nread = getline(&input, &input_length, stdin);
 		if (nread == EOF)
 		{
-			free(input);
 			break;
 		}
 
