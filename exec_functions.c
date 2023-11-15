@@ -141,13 +141,14 @@ void execute_command(char *command)
 		execute_env_command();
 
 	if (_strcmp(args[0], "exit") != 0)
+	{
 		execute_regular_command(args);
+	}
 	else
 	{
 		int status;
 
 		status = custom_exit(args);
-		free(args);
 		exit(status);
 	}
 	free(args);

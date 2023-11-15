@@ -11,6 +11,7 @@
 
 #define MAX_COMMAND_LENGTH 100
 #define MAX_INPUT_LENGTH 1024
+#define MAX_PATH_LENGTH 1024
 #define READ_SIZE 1024
 
 extern char **environ;
