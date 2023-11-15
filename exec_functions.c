@@ -146,10 +146,10 @@ void execute_command(char *command)
 	}
 	else
 	{
-		int status;
+		/* int status; */
 
-		status = custom_exit(args);
-		exit(status);
+		/*status = custom_exit(args);*/
+		exit(0);
 	}
 	free(args);
 }
