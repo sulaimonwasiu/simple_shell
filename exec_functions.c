@@ -143,7 +143,6 @@ void execute_command(char *command)
 	if (_strcmp(args[0], "env") == 0)
 	{
 		execute_env_command();
-		free(args);
 	}
 
 	if (_strcmp(args[0], "exit") != 0)
